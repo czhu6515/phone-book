@@ -15,6 +15,10 @@
     <%= label_tag :email %>
     <%= text_field_tag :email %>
   </div>
+   <div class="search_field">
+    <%= label_tag :state %>
+    <%= select_tag(:state_id, options_for_select(@states), prompt: 'Select' )%>
+  </div>
   <div class="search_field_btn">
     <%= button_tag :search, id: 'search_btn'%>
   </div>
@@ -29,6 +33,7 @@
       <th>Last name</th>
       <th>Phone</th>
       <th>Email</th>
+      <th>State</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -40,4 +45,5 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path %> | 
+<%= link_to 'New State', new_state_path %> | 
